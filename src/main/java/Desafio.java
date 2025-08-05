@@ -13,6 +13,7 @@ public class Desafio {
             System.out.println("5. CÁLCULO FATORIAL");
             System.out.print("\nEscolha um Exercício ou digite 0 para Sair: ");
             int opcao = sc.nextInt();
+            System.out.println("");
             switch (opcao) {
                 case 0:
                     System.out.println("Saindo do da aplicação...");
@@ -97,6 +98,7 @@ public class Desafio {
                     break;
 
                 case 4:
+                    System.out.println("*****Verificar se é Par ou Ímpar!***");
                 /*
                 Crie um programa que solicite ao usuário a entrada de um número inteiro.
                 Verifique se o número é par ou ímpar e exiba uma mensagem correspondente.
@@ -114,17 +116,20 @@ public class Desafio {
                     break;
 
                 case 5:
+                    System.out.println("*****Calcular o Fatorial***");
+
                 /*
                 Crie um programa que solicite ao usuário um número e calcule o fatorial desse número.
                 */
-                    System.out.print("Digite um número a ser calculado o fatorial: ");
-                    int numFatorial = sc.nextInt();
+                        System.out.print("Digite um número para ser calculado o fatorial: ");
+                        int numFatorial = sc.nextInt();
+                        int resultado = 1;
 
-                    for(int i = 0; i < numFatorial; i++){
-                        int x = numFatorial*i;
-                        System.out.println(x);
-                    }
-
+                        for(int i = 1; i <= numFatorial; i++) { // Inicia o contador i em 1 (o fatorial começa a multiplicar a partir de 1).
+                            resultado *= i; //Multiplica o valor atual de resultado por i e armazena o novo valor em resultado.
+                            System.out.println("Passo " + i + ": " + resultado);
+                        }
+                    System.out.println("---------------------------------");
                 break;
 
                 default:
@@ -134,11 +139,3 @@ public class Desafio {
             while(true);
     }
 }
-/*
-    Crie um programa que solicite ao usuário digitar um número. Se o número for positivo, exiba "Número positivo", caso contrário, exiba "Número negativo".
-    Peça ao usuário para inserir dois números inteiros. Compare os números e imprima uma mensagem indicando se são iguais, diferentes, o primeiro é maior ou o segundo é maior.
-    Crie um menu que oferece duas opções ao usuário: "1. Calcular área do quadrado" e "2. Calcular área do círculo". Solicite a escolha do usuário e realize o cálculo da área com base na opção selecionada.
-    Crie um programa que solicite ao usuário um número e exiba a tabuada desse número de 1 a 10.
-    Crie um programa que solicite ao usuário a entrada de um número inteiro. Verifique se o número é par ou ímpar e exiba uma mensagem correspondente.
-    Crie um programa que solicite ao usuário um número e calcule o fatorial desse número.
-*/
